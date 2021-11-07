@@ -1,0 +1,56 @@
+from tkinter import *
+import random
+
+
+root = Tk()
+root.geometry("914x360")
+root.title("Vem köper julklapp till vem?")
+root.iconbitmap(root, "present.ico")
+
+root.resizable(False, False)
+bg = PhotoImage(file="christmas.png")
+
+my_canvas = Canvas(root, width=914, height=360)
+my_canvas.pack(fill="both", expand=True)
+my_canvas.create_image(0, 0, image=bg, anchor="nw")
+
+
+
+title = Label(root, text="Julklappsfördelning", font=("Calibri", 24), bg="#FFFFFF")
+title.place(x = 330, y = 20)
+
+tkvar = StringVar(root)
+
+people_list = ['name1', 'name2', 'name3', 'name4', 'name5']
+
+
+random_list = random.sample(people_list, k=people_list(len)
+
+
+def klick():
+
+    
+
+    first_perrson = Label(root, text=random_list[0], font=("Calibri", 17), bg="#FFFFFF")
+    first_perrson.place(x = 270, y = 220)     
+    
+    second_perrson = Label(root, text=random_list[1], font=("Calibri", 17),  bg="#FFFFFF")
+    second_perrson.place(x = 410, y = 150)
+
+    third_perrson = Label(root, text=random_list[2], font=("Calibri", 17), bg="#FFFFFF")
+    third_perrson.place(x = 560, y = 220)
+
+    fourth_perrson = Label(root, text=random_list[3], font=("Calibri", 17), bg="#FFFFFF")
+    fourth_perrson.place(x = 495, y = 290)
+
+    fifth_perrson = Label(root, text=random_list[4], font=("Calibri", 17), bg="#FFFFFF")
+    fifth_perrson.place(x = 340, y = 292)
+  
+
+
+submit = Button(root, text="Slumpa!",font=("Calibri", 10), width="10", border="0.7", bg="#FFFFFF", command=klick)
+submit.place(x = 700, y = 280)
+
+
+root.mainloop()
+
